@@ -8,14 +8,13 @@
     
     if(isset($_POST['submit'])){
 
-        if(!empty($_POST['fullname']) && !empty($_POST['email']) && !empty($_POST['address']) && !empty($_POST['status'])){
+        if(!empty($_POST['disease']) && !empty($_POST['symptom']) && !empty($_POST['prescription'])){
 
-            $fullname = $_POST['fullname'];
-            $email = $_POST['email'];
-            $address = $_POST['address'];
-            $status = $_POST['status'];
+            $disease = $_POST['disease'];
+            $symptom = $_POST['symptom'];
+            $prescription = $_POST['prescription'];
 
-            $query = "insert into patient(fullname,email,address,status) values('$fullname','$email','$address','$status')";
+            $query = "insert into disease(disease,symptom,prescription) values('$disease','$symptom','$prescription')";
 
             $run = mysqli_query($conn,$query) or die(mysqli_error());
 
@@ -25,7 +24,7 @@
             }
             else {
 
-                echo "Form not submitted !";
+                echo  "Form not submitted !";
             }
             }
         else {

@@ -8,37 +8,20 @@
     <title>ADD DISEASES</title>
 </head>
 <body>
-    <?php require_once 'connect.php' ?>
-    <?php 
-        if(isset($_POST['add'])){
-            $disease = $_POST['disease'];
-            $symptom = $_POST['symptom'];
-            $prescription = $_POST['prescription'];
-
-            if($conn -> query("INSERT INTO patient(	Disease,Symptom,Prescription) VALUES (N'$disease',N'$symptom',N'$prescription')")){
-                echo "<script>alert('Successful added');</script>";
-            }else {
-                echo "<script>alert('UnSuccessful added');</script>";
-            }
-        }
-        $conn->close();
-    ?>
-
-
     <div class="container1">
-        <form method="POST" action="connet.php">
+        <form method="POST" action="connect2.php">
             <div class="form-group">
                 <label for="disease">Disease</label>
-                <input type="disease" class="form-control" placeholder="...">
+                <input type="disease" class="form-control" name="disease" placeholder="..."> 
             </div>
             <div class="form-group">
                 <label for="symptom">Symptom</label>
-                <input type="symptom" class="form-control" placeholder="...">
+                <input type="symptom" class="form-control" name="symptom" placeholder="...">
             </div>
             <div class="form-group">
                 <label for="prescription">Prescription</label>
-                <input type="prescription" class="form-control" placeholder="...">
-            <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="prescription" class="form-control" name="prescription" placeholder="...">
+            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </form>
     </div>
 </body>

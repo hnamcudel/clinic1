@@ -10,23 +10,21 @@
     <body>
         <?php require_once 'connectv.php' ?>
         <?php 
-            $result = $conn -> query("SELECT * FROM diseases");
+            $result = $conn -> query("SELECT * FROM disease");
         ?>
         <div class="container">
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">Disease</th>
-                        <th scope="col">Symptom</th>
-                        <th scope="col">Prescription</th>
+                        <th scope="col">Details</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php while($row = mysqli_fetch_assoc($result)): ?>
                     <tr>
                         <th><?php echo $row['disease']; ?></th>
-                        <td><?php echo $row['symptom']; ?></td>
-                        <td><?php echo $row['prescription']; ?></td>
+                        <td><?php echo $row['details']; ?></td>
                     </tr>
                     <?php endwhile; ?>
                 </tbody>

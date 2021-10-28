@@ -8,14 +8,13 @@
     
     if(isset($_POST['submit'])){
 
-        if(!empty($_POST['fullname']) && !empty($_POST['email']) && !empty($_POST['address']) && !empty($_POST['status'])){
+        if(!empty($_POST['username']) && !empty($_POST['password'])){
 
-            $fullname = $_POST['fullname'];
-            $email = $_POST['email'];
-            $address = $_POST['address'];
-            $status = $_POST['status'];
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            
 
-            $query = "insert into patient(fullname,email,address,status) values('$fullname','$email','$address','$status')";
+            $query = "insert into patient(username,password) values('$username','$password')";
 
             $run = mysqli_query($conn,$query) or die(mysqli_error());
 

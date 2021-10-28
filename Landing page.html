@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Final Web app development</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Heothi Life</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Topics</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="Cloud.png" id="cloud">
+            <img src="Back.png" id="back">
+            <h2 id="text">HEOTHI LIFE</h2>
+            <a href="login page.html" id="btn">Sign In</a>
+            <img src="front.png" id="front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Heothi Life đem đến thông tin sức khỏe mà bạn cần</h2>
+            <p>
+                Tất cả bài viết của Hello Bacsi đều được viết dựa trên những tin tức y khoa, nghiên cứu và báo cáo khoa học đến từ các tổ chức giáo dục, y tế hàng đầu.Những thứ mà bạn nạp vào cơ thể cũng có ảnh hưởng đến đôi mắt của bạn. Bạn nên hấp thụ những chất dinh dưỡng như axit béo omega-3, lutein, kẽm, vitamin C và E. Theo nghiên cứu, nếu ăn các loại thực phẩm chứa các dưỡng chất này, bạn sẽ có khả năng tránh khỏi những vấn đề do lão hóa ở mắt như là thoái hóa điểm vàng hoặc đục thủy tinh thể. Những thực phẩm dưới đây sẽ có ích cho đôi mắt của bạn:
+            </p>
+        </div>
+        <script>
+            let Cloud = document.getElementById('cloud');
+            let Back = document.getElementById('back');
+            let Text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let Front = document.getElementById('front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                Cloud.style.top = value*1.25 + 'px';
+                Back.style.top = value*0.5 + 'px';
+                Text.style.marginRight = value*2 + 'px';
+                btn.style.marginTop = value *1.5 + 'px';
+                header.style.marginTop = value *0.5 + 'px';
+            }
+            )
+        </script>
+    </body>
+</html>

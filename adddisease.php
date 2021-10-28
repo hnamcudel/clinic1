@@ -15,13 +15,9 @@
                 <input type="disease" class="form-control" name="disease" placeholder="..."> 
             </div>
             <div class="form-group">
-                <label for="symptom">Symptom</label>
-                <input type="symptom" class="form-control" name="symptom" placeholder="...">
+                <label for="details">Details</label>
+                <input type="details" class="form-control" name="details" placeholder="...">
             </div>
-            <div class="form-group">
-                <label for="prescription">Prescription</label>
-                <input type="prescription" class="form-control" name="prescription" placeholder="...">
-            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </form>
     </div>
 </body>

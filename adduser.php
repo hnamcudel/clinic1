@@ -11,20 +11,12 @@
         <div class="container">
             <form method="POST" action="connect.php">
                 <div class="form-group">
-                    <label for="fullName">Full Name</label>
-                    <input type="fullname" class="form-control" placeholder="..." name="fullname">
+                    <label for="username">User name</label>
+                    <input type="username" class="form-control" placeholder="Enter your user name here..." name="username">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" placeholder="..." name="email">
-                </div>
-                <div class="form-group">
-                    <label for="address">Adress</label>
-                    <input type="address" class="form-control" placeholder="..." name="address">
-                </div>
-                <div class="form-group">
-                    <label for="status">Status</label>
-                    <input type="status" class="form-control" placeholder="..." name="status">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" placeholder="Enter your password here..." name="password">
                 </div>
                 <button type="submit" class="btn btn-primary" name="submit">Submit</button>
             </form>

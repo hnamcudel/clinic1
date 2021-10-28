@@ -16,19 +16,15 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Patient</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Status</th>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Password</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php while($row = mysqli_fetch_assoc($result)): ?>
                     <tr>
-                        <th><?php echo $row['fullname']; ?></th>
-                        <td><?php echo $row['email']; ?></td>
-                        <td><?php echo $row['address']; ?></td>
-                        <td><?php echo $row['status']; ?></td>
+                        <th><?php echo $row['username']; ?></th>
+                        <td><?php echo $row['password']; ?></td>
                     </tr>
                     <?php endwhile; ?>
                 </tbody>
